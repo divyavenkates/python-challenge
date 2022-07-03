@@ -31,3 +31,13 @@ with open(filepath,'r') as file:
     print(f"Average Change: $ {round(average,2)}")
     print(f"Greatest Increase in Profits: {date[maxindex+1]} (${max(changes)})")
     print(f"Greatest Decrease in Profits: {date[minindex+1]} (${min(changes)})")
+
+outputpath=os.path.join("Analysis", "pybank.txt")
+with open(outputpath,'w') as file:
+    file.write("Financial Analysis\n")
+    file.write("---------------------------- \n")  
+    file.write(f"Total Months: {months}\n")
+    file.write(f"Total: ${totalprice} \n") 
+    file.write(f"Average Change: $ {round(average,2)}\n")
+    file.write(f"Greatest Increase in Profits: {date[maxindex+1]} (${max(changes)})\n")
+    file.write(f"Greatest Decrease in Profits: {date[minindex+1]} (${min(changes)})\n")

@@ -46,4 +46,14 @@ with open(filepath,'r') as file:
     print("---------------------------- ") 
 
 outputpath=os.path.join("Analysis", "pypoll.txt")
-with open(output,'w') as file: 
+with open(outputpath,'w') as file:
+    file.write("Election Results\n")
+    file.write("---------------------------- \n")  
+    file.write(f"Total Votes: {votes}\n")
+    file.write("---------------------------- \n") 
+    file.write(f"{candidates[0]}: {round(charlespercent,3)}% ({charlesvotes})\n")
+    file.write(f"{candidates[1]}: {round(dianapercent,3)}% ({dianavotes})\n")
+    file.write(f"{candidates[2]}: {round(raymonpercent,3)}% ({raymonvotes})\n")
+    file.write("----------------------------\n ") 
+    file.write(f"Winner: {winner}\n") 
+    file.write ("---------------------------- \n") 
