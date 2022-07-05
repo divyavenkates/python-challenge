@@ -12,7 +12,7 @@ with open(filepath,'r') as file:
     #set months and totalprice equal to 0
     months=0
     totalprice=0
-    #create empty list for each column in list 
+    #create empty list for each column in budget_data.csv
     profits=[]
     date=[]
     #create empty list for profit changes between each row 
